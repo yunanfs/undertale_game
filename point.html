@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERTALE - Point System</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main menu">
+        <div class="nav-container">
+            <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-brand">MENU</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">GAME</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="character.html" class="nav-link">CHARACTER</a></li>
+                <li><a href="point.html" class="nav-link active">POINT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Point Title Section -->
+        <div class="point-title-section">
+            <span class="asterisk-icon">*</span>
+            <h1 class="point-title">POINT SYSTEM</h1>
+        </div>
+
+        <!-- Point Content Boxes -->
+        <div class="point-content">
+            <!-- Box 1: Experience Points -->
+            <div class="point-box">
+                <div class="box-header">
+                    <span class="asterisk-small">*</span>
+                </div>
+                <div class="box-content">
+                    <p><strong>EXPERIENCE POINTS (EXP)</strong></p>
+                    <p>Gain EXP by defeating monsters or completing actions.</p>
+                    <p>EXP increases your level and makes you stronger in battle.</p>
+                </div>
+                <div class="box-corner">■</div>
+            </div>
+
+            <!-- Box 2: Level System -->
+            <div class="point-box">
+                <div class="box-header">
+                    <span class="asterisk-small">*</span>
+                </div>
+                <div class="box-content">
+                    <p><strong>LEVEL</strong></p>
+                    <p>Your level determines your base HP, attack power, and defense.</p>
+                    <p>Starting at Level 1, you can reach up to Level 99.</p>
+                </div>
+                <div class="box-corner">■</div>
+            </div>
+
+            <!-- Box 3: HP System -->
+            <div class="point-box">
+                <div class="box-header">
+                    <span class="asterisk-small">*</span>
+                </div>
+                <div class="box-content">
+                    <p><strong>HP (Health Points)</strong></p>
+                    <p>Your HP represents your current health in battle.</p>
+                    <p>If HP reaches 0, the battle ends and you must retry.</p>
+                </div>
+                <div class="box-corner">■</div>
+            </div>
+
+            <!-- Box 4: Battle Actions -->
+            <div class="point-box">
+                <div class="box-header">
+                    <span class="asterisk-small">*</span>
+                </div>
+                <div class="box-content">
+                    <p><strong>BATTLE ACTIONS</strong></p>
+                    <p>FIGHT: Deal damage to the enemy.</p>
+                    <p>ACT: Show kindness or gather information.</p>
+                    <p>ITEM: Use items to heal or support.</p>
+                    <p>MERCY: Spare the enemy and end battles peacefully.</p>
+                </div>
+                <div class="box-corner">■</div>
+            </div>
+
+            <!-- Box 5: Mercy System -->
+            <div class="point-box">
+                <div class="box-header">
+                    <span class="asterisk-small">*</span>
+                </div>
+                <div class="box-content">
+                    <p><strong>MERCY POINTS</strong></p>
+                    <p>Using ACT and MERCY actions increases a hidden mercy meter.</p>
+                    <p>When the mercy meter is full, you can spare the enemy completely.</p>
+                </div>
+                <div class="box-corner">■</div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="back-button-container">
+            <a href="index.html" class="back-button">
+                <span class="asterisk">*</span> BACK TO GAME
+            </a>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

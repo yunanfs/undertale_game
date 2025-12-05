@@ -1,0 +1,74 @@
+# ============================================
+# UNDERTALE GAME - APACHE CONFIGURATION
+# ============================================
+
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Block direct access to sensitive files
+    RewriteRule ^php/ - [F]
+    RewriteRule ^logs/ - [F]
+    RewriteRule ^config\. - [F]
+    
+    # Redirect to index.html for game pages
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.html [QSA,L]
+</IfModule>
+
+# ============================================
+# SECURITY HEADERS
+# ============================================
+
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Enable XSS protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Set Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+</IfModule>
+
+# ============================================
+# GZIP COMPRESSION
+# ============================================
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# ============================================
+# CACHING
+# ============================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Cache static files for 7 days
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType image/jpeg "access plus 7 days"
+    ExpiresByType image/png "access plus 7 days"
+    ExpiresByType image/gif "access plus 7 days"
+    
+    # Don't cache HTML and PHP
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType application/x-httpd-php "access plus 0 seconds"
+</IfModule>
+
+# ============================================
+# FILE UPLOAD
+# ============================================
+
+# Prevent script execution in upload directories
+<Directory /var/www/undertale_game/uploads>
+    php_flag engine off
+    AddType text/plain .php .phtml .php3 .php4 .php5 .phps
+</Directory>

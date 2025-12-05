@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERTALE - The RPG Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main menu">
+        <div class="nav-container">
+            <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-brand">MENU</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">GAME</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="character.html" class="nav-link">CHARACTER</a></li>
+                <li><a href="point.html" class="nav-link">POINT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="game-container">
+        <!-- Title Section -->
+        <div class="title-section">
+            <div class="heart-icon">❤</div>
+            <h1 class="title">UNDERTALE</h1>
+            <p class="subtitle">The RPG game where you<br>don't have to destroy anyone.</p>
+        </div>
+
+        <!-- Character Info Section -->
+        <div class="character-info">
+            <div class="character-name">FRISK</div>
+            <div class="character-level">LV 1</div>
+            <div class="character-hp">
+                <span class="hp-text">HP <span id="current-hp">20</span> / 20</span>
+                <div class="hp-bar">
+                    <div class="hp-fill" id="hp-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="action-btn fight-btn" data-action="fight">
+                <span class="asterisk">*</span> FIGHT
+            </button>
+            <button class="action-btn act-btn" data-action="act">
+                <span class="asterisk">*</span> ACT
+            </button>
+            <button class="action-btn item-btn" data-action="item">
+                <span class="asterisk">*</span> ITEM
+            </button>
+            <button class="action-btn mercy-btn" data-action="mercy">
+                <span class="asterisk">*</span> MERCY
+            </button>
+        </div>
+
+        <!-- Dialog Section -->
+        <div class="dialog-section">
+            <div class="dialog-title">MERCY</div>
+            <div class="dialog-content">
+                <p>* Spare the enemy</p>
+                <p>* End battle peacefully</p>
+                <p>* Run away from danger</p>
+                <p>* Save your friends</p>
+            </div>
+        </div>
+
+        <!-- Loading dots -->
+        <div class="loading-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
