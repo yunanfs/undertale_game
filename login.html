@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERTALE - Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="login-page">
+    <!-- Login Container -->
+    <div class="login-container">
+        <!-- Title -->
+        <div class="login-title">
+            <h1>UNDERTALE</h1>
+        </div>
+
+        <!-- Login Box -->
+        <div class="login-box">
+            <!-- Character Name Input -->
+            <div class="login-input-group">
+                <input 
+                    type="text" 
+                    id="player-name" 
+                    class="login-input" 
+                    placeholder="Enter your name..." 
+                    maxlength="20"
+                    autocomplete="off"
+                >
+            </div>
+
+            <!-- Character Stats -->
+            <div class="login-stats">
+                <div class="login-stat-row">
+                    <span class="stat-label">LV 1</span>
+                    <span class="stat-hp">HP 20/20</span>
+                </div>
+                <div class="hp-bar-login">
+                    <div class="hp-fill-login"></div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="login-buttons">
+                <button id="start-btn" class="login-btn start-btn">
+                    <span class="btn-icon">[▶]</span> START
+                </button>
+                <button id="reset-btn" class="login-btn reset-btn">
+                    <span class="btn-icon">[X]</span> RESET
+                </button>
+            </div>
+
+            <!-- Footer Text -->
+            <div class="login-footer">
+                <p>* Press [Z] to enter the Underground...</p>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="login-loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Bottom Text -->
+        <div class="login-bottom-text">
+            <p>* A great art 8bit tribute</p>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

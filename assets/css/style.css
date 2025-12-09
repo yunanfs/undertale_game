@@ -19,6 +19,220 @@ body {
 }
 
 /* ============================================
+   LOGIN PAGE STYLES
+   ============================================ */
+
+body.login-page {
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.login-title {
+    margin-bottom: 20px;
+}
+
+.login-title h1 {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+}
+
+.login-box {
+    background-color: #000;
+    border: 3px solid #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-input-group {
+    margin: 20px 0;
+}
+
+.login-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: #000;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.login-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-color: #ff0000;
+}
+
+.login-stats {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.login-stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.stat-hp {
+    color: #ff0000;
+}
+
+.hp-bar-login {
+    width: 100%;
+    height: 20px;
+    background-color: #333;
+    border: 2px solid #fff;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.hp-fill-login {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ff6666);
+    width: 100%;
+    animation: slideIn 0.4s ease-out;
+}
+
+.login-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.login-btn {
+    flex: 1;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 2px;
+}
+
+.login-btn:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.login-btn:active {
+    transform: scale(0.95);
+}
+
+.btn-icon {
+    margin-right: 8px;
+}
+
+.start-btn {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.start-btn:hover {
+    background-color: #00ff00;
+    color: #000;
+    border-color: #00ff00;
+}
+
+.reset-btn {
+    border-color: #ffff00;
+    color: #ffff00;
+}
+
+.reset-btn:hover {
+    background-color: #ffff00;
+    color: #000;
+    border-color: #ffff00;
+}
+
+.login-footer {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.login-loading {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.login-loading span {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    animation: blink 1.5s infinite;
+}
+
+.login-loading span:nth-child(1) { animation-delay: 0s; }
+.login-loading span:nth-child(2) { animation-delay: 0.1s; }
+.login-loading span:nth-child(3) { animation-delay: 0.2s; }
+.login-loading span:nth-child(4) { animation-delay: 0.3s; }
+.login-loading span:nth-child(5) { animation-delay: 0.4s; }
+
+.login-bottom-text {
+    font-size: 12px;
+    color: #888;
+    margin-top: 30px;
+}
+
+.login-bottom-text p {
+    opacity: 0.7;
+}
+
+/* ============================================
    NAVIGATION BAR
    ============================================ */
 
