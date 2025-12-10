@@ -299,6 +299,21 @@ window.handleAction = handleAction;
 window.updateHP = updateHP;
 window.logGameState = logGameState;
 
+// Function to return to main game from battle
+window.returnToMainGame = function() {
+    // Hide battle canvas
+    const battleContainer = document.getElementById('battle-container');
+    battleContainer.style.display = 'none';
+
+    // Show main game elements
+    document.querySelector('.game-container').style.display = 'block';
+
+    // Reset battle game
+    if (window.battleGame) {
+        window.battleGame.reset();
+    }
+};
+
 // ============================================
 // HAMBURGER NAVIGATION (Floating menu)
 // ============================================

@@ -283,29 +283,43 @@ class BattleGame {
     winBattle() {
         this.battleActive = false;
         this.battlePhase = 'victory';
-        
+
         // Award points
         this.score.exp += this.enemy.exp;
         this.score.gold += this.enemy.gold;
-        
+
         // Play victory sound
         this.playSound(500, 0.1);
         this.playSound(600, 0.1, 0.1);
         this.playSound(700, 0.2, 0.2);
-        
+
         // Show victory message
         this.showBattleResult('VICTORY', `YOU WON!\n+${this.enemy.exp} EXP\n+${this.enemy.gold} GOLD\nDodges: ${this.score.dodges}`);
+
+        // Return to main game after 3 seconds
+        setTimeout(() => {
+            if (window.returnToMainGame) {
+                window.returnToMainGame();
+            }
+        }, 3000);
     }
 
     defeatBattle() {
         this.battleActive = false;
         this.battlePhase = 'defeat';
-        
+
         // Play defeat sound
         this.playSound(200, 0.3);
-        
+
         // Show defeat message
         this.showBattleResult('DEFEAT', 'YOU LOST...\nTry again!');
+
+        // Return to main game after 3 seconds
+        setTimeout(() => {
+            if (window.returnToMainGame) {
+                window.returnToMainGame();
+            }
+        }, 3000);
     }
 
     draw() {
