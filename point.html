@@ -113,5 +113,16 @@
     </div>
 
     <script src="assets/js/script.js"></script>
+    <script>
+        // Add click interactivity to point boxes
+        document.addEventListener('DOMContentLoaded', function() {
+            const boxes = document.querySelectorAll('.point-box');
+            boxes.forEach(box => {
+                box.addEventListener('click', function() {
+                    playActionSound('act');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

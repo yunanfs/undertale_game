@@ -36,48 +36,98 @@
 
         <!-- About Content Boxes -->
         <div class="about-content">
-            <!-- Box 1 -->
-            <div class="about-box">
+            <!-- Box 1: What is UNDERTALE? -->
+            <div class="about-box" data-sound="act">
+                <div class="box-image">
+                    <img src="https://via.placeholder.com/150x100/000000/FFFFFF?text=UNDERTALE" alt="UNDERTALE Logo">
+                </div>
                 <div class="box-header">
                     <span class="asterisk-small">*</span>
                 </div>
                 <div class="box-content">
-                    <p>UNDERTALE is a role-playing game created by indie developer Toby Fox.</p>
+                    <p><strong>* WHAT IS UNDERTALE?</strong></p>
+                    <p>A role-playing game by Toby Fox.</p>
+                    <p>Where choices define your destiny.</p>
                 </div>
                 <div class="box-corner">■</div>
             </div>
 
-            <!-- Box 2 -->
-            <div class="about-box">
+            <!-- Box 2: The Underground -->
+            <div class="about-box" data-sound="act">
+                <div class="box-image">
+                    <img src="https://via.placeholder.com/150x100/333333/FFFFFF?text=UNDERGROUND" alt="The Underground">
+                </div>
                 <div class="box-header">
                     <span class="asterisk-small">*</span>
                 </div>
                 <div class="box-content">
-                    <p>The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magic barrier.</p>
+                    <p><strong>* THE UNDERGROUND</strong></p>
+                    <p>A realm beneath the surface.</p>
+                    <p>Home to monsters sealed away.</p>
                 </div>
                 <div class="box-corner">■</div>
             </div>
 
-            <!-- Box 3 -->
-            <div class="about-box">
+            <!-- Box 3: Your Choice -->
+            <div class="about-box" data-sound="act">
+                <div class="box-image">
+                    <img src="https://via.placeholder.com/150x100/666666/FFFFFF?text=CHOICE" alt="Your Choice">
+                </div>
                 <div class="box-header">
                     <span class="asterisk-small">*</span>
                 </div>
                 <div class="box-content">
-                    <p>The player meets various monsters during the journey back to the surface.</p>
-                    <p>Some monsters might engage the player in a fight.</p>
+                    <p><strong>* YOUR CHOICE MATTERS</strong></p>
+                    <p>Will you show kindness or cruelty?</p>
+                    <p>Multiple endings await.</p>
                 </div>
                 <div class="box-corner">■</div>
             </div>
 
-            <!-- Box 4 - Game Mechanics -->
-            <div class="about-box">
+            <!-- Box 4: The Journey -->
+            <div class="about-box" data-sound="act">
+                <div class="box-image">
+                    <img src="https://via.placeholder.com/150x100/999999/FFFFFF?text=JOURNEY" alt="The Journey">
+                </div>
                 <div class="box-header">
                     <span class="asterisk-small">*</span>
                 </div>
                 <div class="box-content">
-                    <p>Deal damage to monsters</p>
-                    <p>But... nobody came.</p>
+                    <p><strong>* A MEMORABLE JOURNEY</strong></p>
+                    <p>Make friends with monsters.</p>
+                    <p>Uncover dark secrets.</p>
+                </div>
+                <div class="box-corner">■</div>
+            </div>
+
+            <!-- Box 5: Combat System -->
+            <div class="about-box" data-sound="act">
+                <div class="box-image">
+                    <img src="https://via.placeholder.com/150x100/CCCCCC/FFFFFF?text=COMBAT" alt="Combat System">
+                </div>
+                <div class="box-header">
+                    <span class="asterisk-small">*</span>
+                </div>
+                <div class="box-content">
+                    <p><strong>* UNIQUE COMBAT</strong></p>
+                    <p>Dodge attacks in real-time.</p>
+                    <p>Spare foes or strike them down.</p>
+                </div>
+                <div class="box-corner">■</div>
+            </div>
+
+            <!-- Box 6: The Ending -->
+            <div class="about-box" data-sound="act">
+                <div class="box-image">
+                    <img src="https://via.placeholder.com/150x100/FFFFFF/000000?text=ENDINGS" alt="Multiple Endings">
+                </div>
+                <div class="box-header">
+                    <span class="asterisk-small">*</span>
+                </div>
+                <div class="box-content">
+                    <p><strong>* MULTIPLE ENDINGS</strong></p>
+                    <p>True Pacifist. Neutral. Genocide.</p>
+                    <p>Will you... ever return?</p>
                 </div>
                 <div class="box-corner">■</div>
             </div>
@@ -92,5 +142,16 @@
     </div>
 
     <script src="assets/js/script.js"></script>
+    <script>
+        // Add click interactivity to about boxes
+        document.addEventListener('DOMContentLoaded', function() {
+            const boxes = document.querySelectorAll('.about-box');
+            boxes.forEach(box => {
+                box.addEventListener('click', function() {
+                    playActionSound('act');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
